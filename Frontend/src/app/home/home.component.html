@@ -24,16 +24,24 @@
         max-width: 350px;
         margin-bottom: 1rem;
       }
+
+      body {
+        background-color: rgb(238, 209, 239);
+      }
+
+      .sujai {
+        background-color: rgb(238, 209, 239);
+      }
     </style>
   </head>
   <body>
-    <div class="container my-5">
+    <div class="py-5 px-5">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <div class="card shadow-lg p-3 mb-5 bg-body rounded">
-            <div class="card-body text-center">
-              <h1 class="card-title fw-bold mb-4">
-                Welcome to Sujai - Library
+          <div class="card shadow-lg p-3 mb-5 bg-body rounded sujai">
+            <div class="card-body text-center sujai">
+              <h1 class="card-title fw-bold mb-2">
+                Welcome to Sujai - Library 📚
               </h1>
             </div>
           </div>
@@ -48,7 +56,7 @@
                 src="../assets/admin.png"
                 alt="Admin Image"
                 class="login-img"
-                style="height: 250px; width: 300px"
+                style="height: 250px; width: 250px"
               />
               <a routerLink="/admin/login" class="btn btn-primary w-100"
                 >Login</a
@@ -64,7 +72,7 @@
                 src="../assets/student.png"
                 alt="Student Image"
                 class="login-img"
-                style="height: 250px; width: 300px"
+                style="height: 250px; width: 280px"
               />
               <a
                 routerLink="/student/student-login"
@@ -75,6 +83,7 @@
           </div>
         </div>
       </div>
+      <br />
     </div>
   </body>
 </html>
