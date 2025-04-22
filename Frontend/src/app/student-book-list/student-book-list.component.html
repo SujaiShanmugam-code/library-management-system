@@ -18,7 +18,10 @@
       </thead>
       <tbody>
         <tr *ngFor="let book of books">
-          <td>{{ book.title }}</td>
+          <td>
+            {{ book.title }}
+            <a href="https://www.planetebook.com/free-ebooks/1984.pdf">link</a>
+          </td>
           <td>{{ book.publisher }}</td>
           <td>{{ book.isbn }}</td>
           <td>{{ book.availability }}</td>
