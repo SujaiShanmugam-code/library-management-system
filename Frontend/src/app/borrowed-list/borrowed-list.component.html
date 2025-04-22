@@ -1,0 +1,40 @@
+<div class="card mb-4">
+    <div class="card-header">
+        <div class = "row">
+            <div class="col col-md-6" >
+                <i class="fas fa-table me-1"></i>Borrowed Books Management
+            </div>
+            <div class="col col-md-6 d-flex justify-content-end">
+                <a routerLink="/admin/create-borrowed" routerLinkActive="active" class = "btn btn-success btn-sm">Add Books</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+<table class = "display" cellspacing="0" id="table">
+    <thead>
+        <tr>
+            <th>Student name</th>
+            <th>Email</th>
+            <th>Book</th>
+            <th>Borrowed date</th>
+            <th>Due date</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let book of borrowed">
+        <td>{{ book.sname }}</td>
+        <td>{{ book.email }}</td>
+        <td>{{ book.b_book }}</td>
+        <td>{{ book.b_date }}</td>
+        <td>{{ book.d_date }}</td>
+        <td>
+            <button (click) = "updateBooks(book.id)" class="btn btn-primary btn-sm">Edit</button>
+            <button (click) = "deleteBorrowed(book.id)" class="btn btn-danger btn-sm" style="margin-left: 10px;">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<!-- <router-outlet></router-outlet> -->

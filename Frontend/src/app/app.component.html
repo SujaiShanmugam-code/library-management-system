@@ -1,0 +1,9 @@
+<!-- Navbar for admin -->
+<app-navbar *ngIf="isAdminRoute()"></app-navbar>
+
+<!-- Navbar for student -->
+<app-student-navbar *ngIf="isStudentRoute()"></app-student-navbar>
+
+<div *ngIf="!(isAdminRoute() || isStudentRoute())">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,43 @@
+<div class="container-fluid py-4" style="min-height: 700px;">
+	<h2 class="text-center">Books Manager</h2>
+    <br>
+<div class = "row mx-auto">
+    <div class="col-md-6 mx-auto">
+        <div class="card mb-4">
+            <div class="card-header" >
+                <i class="fas fa-user-plus"></i>Book Details
+            </div>
+            <div class="card-body">
+
+                <form (ngSubmit) = "Submit()">
+
+                    <div class = "mb-3">
+                        <label class = "form-label">Book Name</label>
+                        <input type ="text" name="bookname" id="bookname" class="form-control" [(ngModel)] = "books.title" />
+                    </div>
+
+                    <div class = "mb-3">
+                        <label class = "form-label">Publisher</label>
+                        <input type ="text" name="publisher" id="publisher" class="form-control" [(ngModel)] = "books.publisher" />
+                    </div>
+
+                    <div class = "mb-3">
+                        <label class = "form-label">ISBN</label>
+                        <input type ="text" name="isbn" id="isbn" class="form-control" [(ngModel)] = "books.isbn" />
+                    </div>
+
+                    <div class = "mb-3">
+                        <label class = "form-label">Availability</label>
+                        <input type ="text" name="availability" id="availability" class="form-control" [(ngModel)] = "books.availability" />
+                    </div>
+
+                    <div class ="mt-4 mb-0">
+                        <input type ="submit" name="add" value="Add" class="btn btn-success" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

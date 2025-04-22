@@ -1,0 +1,63 @@
+<nav
+  *ngIf="
+    router.url !== '/admin/login' && router.url !== '/student/student-login'
+  "
+  class="navbar navbar-expand-lg navbar-dark bg-dark navbar-lg"
+>
+  <div class="container-fluid">
+    <a
+      routerLink="/books"
+      routerLinkActive="active"
+      class="navbar-brand me-auto"
+    >
+      <div class="text-center">
+        <img src="../assets/mylogo2.png" width="50px" height="65px" />
+        <h2>Sujai - Library</h2>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#Content"
+      aria-controls="Content"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="Content">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            routerLink="student/student-home"
+            routerLinkActive="active"
+            class="nav-link text-white"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="student/student-book-list"
+            routerLinkActive="active"
+            class="nav-link text-white"
+            >Books</a
+          >
+        </li>
+        <li class="nav-item ms-2 d-md-inline">
+          <a
+            routerLink="/student/student-login"
+            routerLinkActive="active"
+            class="btn btn-secondary"
+            (click)="logout()"
+            >Log Out</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br />
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
